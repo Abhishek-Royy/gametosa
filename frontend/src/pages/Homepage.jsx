@@ -55,7 +55,7 @@ function Homepage() {
             FOR GAMERS
           </h1>
 
-          <div className="gamers-slider">
+          <div className="gamers-slider  sm:w-full w-[85%] m-auto ">
             <Gamers_Slider />
           </div>
         </div>
