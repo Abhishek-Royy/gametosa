@@ -49,7 +49,7 @@ function Navbar() {
           ))}
         </ul>
         <button
-          className="bg-black sm:p-3 p-2 rounded-lg sm:font-medium hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
+          className="bg-black sm:p-3 p-2 rounded-lg sm:font-medium hover:bg-[#86CCDB] hover:text-black ease-in duration-300 animate-pulse"
           style={{
             boxShadow:
               " 0 0 2px #fff, 0 0 200px #fff, 0 0 10px #0ba9ca, 0 0 20px #0ba9ca,0 0 10px #0ba9ca, 0 0 30px #0ba9ca",

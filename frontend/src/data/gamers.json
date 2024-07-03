@@ -1,0 +1,29 @@
+
+
+[
+    {
+        "image":"flashreward.webp",
+        "title":"Flash Rewards",
+        "desc":"User can get a chance/PER DAY win upto 20 to 100 free coins."
+    },
+    {
+        "image":"firstmobilescreen.webp",
+        "title":"Instant Games",
+        "desc":"An HTML5 cross Gaming platform where you don't need to download games, it's available inapp. The more you play the more you can earn."
+    },
+    {
+        "image":"guilds.webp",
+        "title":"Guilds",
+        "desc":"Exclusive features for the Guilds and for their fans. Community can now grow their Fan by using Gametosa Guilds features."
+    },
+    {
+        "image":"tournament.webp",
+        "title":"Tournaments",
+        "desc":"Gametosa brings gamer together on one platform to horn their gaming skills. Compete against each other towards glory to get rewarded."
+    },
+    {
+        "image":"offerwall.webp",
+        "title":"Offerwall",
+        "desc":"Gametosa brings opportunity For the Gamer and the user to monitize and earn more revenue by doing simple tasks to earn more rewards."
+    }
+]
