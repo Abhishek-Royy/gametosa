@@ -34,7 +34,7 @@ function Homepage() {
               </button>
             </div>
           </div>
-          <div className="right sm:w-1/2 w-[95%] m-auto pt-10 sm:h-full h-[50vh] flex items-center justify-center ">
+          <div className="right sm:w-1/2 w-[95%] m-auto pt-10 sm:h-full h-[50vh] flex sm:items-center sm:justify-center ">
             <img
               className="w-full h-full object-cover"
               src={Main}
@@ -42,6 +42,7 @@ function Homepage() {
             />
           </div>
         </div>
+        {/* gnf */}
       </div>
     </>
   );
