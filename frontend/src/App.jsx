@@ -4,11 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Homepage from "./pages/Homepage";
 import Store from "./pages/Store";
-import Product from "./pages/Products"
+import Product from "./pages/Products";
 import About from "./pages/About";
 import Partnership from "./pages/Partnership";
-import Contactus from "./pages/Contactus"
-import Login from "./pages/Login"
+import Contactus from "./pages/Contactus";
+import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

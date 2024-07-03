@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <>
       <div
-        className="bg-black text-white flex justify-between items-center h-20 max-w-full sticky top-0 mx-auto px-20 z-[999999999]"
+        className="bg-black text-white flex justify-between items-center h-24 max-w-full sticky top-0 mx-auto sm:px-20 px-5  z-[999999999]"
         style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
       >
         <NavLink to="/">
@@ -47,11 +47,24 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
-          
         </ul>
+        <button
+          className="bg-black sm:p-3 p-2 rounded-lg sm:font-medium hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
+          style={{
+            boxShadow:
+              " 0 0 2px #fff, 0 0 200px #fff, 0 0 10px #0ba9ca, 0 0 20px #0ba9ca,0 0 10px #0ba9ca, 0 0 30px #0ba9ca",
+          }}
+        >
+          <a
+            href="https://play.google.com/store/apps/details?id=gametosa.com"
+            target="_blank"
+          >
+            Download Now
+          </a>
+        </button>
         {/* Mobile Navigation Menu */}
         <div onClick={handleNav} className="block md:hidden">
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {nav ? <AiOutlineClose size={35} /> : <AiOutlineMenu size={35} />}
         </div>
         <ul
           className={`${
