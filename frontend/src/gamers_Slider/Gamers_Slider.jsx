@@ -44,7 +44,6 @@
 
 // export default Gamers_Slider;
 
-
 import React from "react";
 import SliderBox from "./SliderBox";
 import "slick-carousel/slick/slick.css";
@@ -53,38 +52,35 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   const gamerSlides = [
     {
-      image:"flashreward.webp",
+      image: "flashreward.webp",
       heading: "Instant Games",
       info: "An HTML5 cross Gaming platform where you don't need to download games, it's available inapp. The more you play the more you can earn.",
     },
     {
-      image:"firstmobilescreen.webp",
+      image: "firstmobilescreen.webp",
       heading: "Tournaments",
       info: "Gametosa brings gamers together on one platform to hone their gaming skills. Compete against each other towards glory to get rewarded.",
     },
     {
-      image:"guilds.webp",
+      image: "guilds.webp",
       heading: "Offerwall",
       info: "Gametosa brings opportunity for the gamer and the user to monetize and earn more revenue by doing simple tasks to earn more rewards.",
     },
     {
-      image:"tournament.webp",
+      image: "tournament.webp",
       heading: "Guilds",
       info: "Exclusive features for the guilds and for their fans. Community can now grow their fanbase by using Gametosa Guilds features.",
     },
     {
-      image:"offerwall.webp",
+      image: "offerwall.webp",
       heading: "Flash Reward",
       info: "User can get a chance per day to win up to 20 to 100 free coins.",
     },
   ];
 
- 
-
   return (
     <div className="p-4">
-      <SliderBox  slides={gamerSlides} />
-      {/* <SliderBox title="For Creators" slides={creatorSlides} /> */}
+      <SliderBox slides={gamerSlides} />
     </div>
   );
 }

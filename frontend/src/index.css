@@ -49,3 +49,8 @@
 .slick-prev:before{
   display: none;
 }
+
+.slick-prev, .slick-next{
+  display: none;
+  position: relative;
+}
