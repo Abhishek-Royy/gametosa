@@ -10,14 +10,44 @@ import Slider from "react-slick";
 
 import qrCode from "../assets/qr_code.png";
 import roadmapImage from "../assets/roadmap.webp";
+import comunityBg from "../assets/comunity-bg.jpg";
+import joinComunity from "../assets/joinComunity.png";
+import help from "../assets/help.jpg";
+import hiring from "../assets/hiring.webp";
 
 function Homepage() {
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute top-1/2 transform -translate-y-1/2 right-2 z-10 bg-gradient-to-br from-purple-800 to-[#002F47] text-white rounded-full p-3 cursor-pointer"
+        onClick={onClick}
+      >
+        &rarr;
+      </div>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute top-1/2 transform -translate-y-1/2 left-2 z-10 bg-gradient-to-br from-purple-800 to-[#002F47] text-white rounded-full p-2 cursor-pointer"
+        onClick={onClick}
+      >
+        &larr;
+      </div>
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -45,6 +75,7 @@ function Homepage() {
       },
     ],
   };
+
   return (
     <>
       <div className="main w-full min-h-full">
@@ -150,13 +181,13 @@ function Homepage() {
           <h1 className="sm:text-center sm:w-full w-[90%] m-auto text-5xl font-bold">
             GAMES WE SUPPORT
           </h1>
-          <p className="text-center text-lg">
+          <p className="sm:text-center sm:px-0 px-5 text-lg">
             We are constantly expanding our Games Bundle. Stay tuned for your
             favourite games to feature.
           </p>
 
           {/* Images-card */}
-          <div className="allGames w-full sm:h-[60vh] sm:mt-0 mt-10">
+          <div className="allGames sm:w-full w-[95%] m-auto sm:h-[60vh] sm:mt-0 mt-10">
             <Slider {...settings}>
               {gameImage.map((item, index) => (
                 <div key={item.id} className="box w-[30vw]  h-full ">
@@ -183,7 +214,7 @@ function Homepage() {
             What's done & what's next: It's all here for you to explore.
           </p>
           <button
-            className="border rounded-full mt-10 font-medium text-lg bg-black py-4 w-44 hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
+            className="border rounded-full mt-10 font-medium text-lg bg-black py-4 sm:w-44 w-[65%] hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
             style={{
               boxShadow: " #2C93A8 0px 10px 36px 0px, #86CCDB 0px 0px 0px 1px",
             }}
@@ -206,7 +237,7 @@ function Homepage() {
                 boxShadow:
                   " #2C93A8 0px 10px 36px 0px, #86CCDB 0px 0px 0px 1px",
               }}
-              className=" sm:w-[30%] w-[60%] m-auto sm:m-0 h-[18%]  sm:mt-5 mt-5 cursor-pointer rounded-lg"
+              className=" sm:w-[24%] w-[60%] m-auto sm:m-0 h-[18%]  sm:mt-5 mt-5 cursor-pointer rounded-lg"
               href="https://play.google.com/store/apps/details?id=gametosa.com"
               target="_blank"
             >
@@ -220,9 +251,95 @@ function Homepage() {
           <div className="right sm:w-[40%] w-[50%] m-auto flex mt-10 sm:mt-0 items-end flex-col justify-center h-full">
             <img
               className="object-contain  h-[50%]"
+              // style={{
+              //   boxShadow:
+              //     "rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px",
+              // }}
               src={qrCode}
               alt="qr-code"
             />
+          </div>
+        </div>
+
+        {/* Section-9 */}
+        <div
+          className="sec-9 w-full sm:h-[66vh] sm:py-0 py-10 bg-cover sm:flex bg-center sm:px-24"
+          style={{
+            backgroundImage: `url(${comunityBg})`,
+          }}
+        >
+          <div className="left sm:w-1/2 w-[95%] m-auto h-full flex items-center justify-center ">
+            <img src={joinComunity} alt="" />
+          </div>
+          <div className="right sm:w-1/2 w-[95%] m-auto h-full flex items-start justify-center flex-col text-white">
+            <h1 className="sm:text-5xl text-4xl font-semibold">
+              JOIN THE CREATOR COMMUNITY
+            </h1>
+            <p className="my-4">
+              Sign up for early content access, latest news and new features in
+              the Gametosa Creators community
+            </p>
+            <div className="flex sm:w-full w-[95%] m-auto sm:m-0 sm:gap-8 gap-4">
+              <input
+                className="py-4 px-4 sm:w-1/2 w-[60vw] outline-none border-none text-black"
+                type="email"
+                placeholder="Enter email address"
+              />
+              <button
+                className="sm:w-[10vw] w-[25vw] bg-black "
+                style={{
+                  boxShadow: " #8A2BE2 0px 10px 36px 0px, #fff 0px 0px 0px 1px",
+                }}
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Section-10 */}
+        <div
+          className="sec-10 w-full h-[40vh] bg-cover bg-center text-white flex items-center justify-center flex-col"
+          style={{
+            backgroundImage: `url(${help})`,
+          }}
+        >
+          <h1 className="text-4xl font-semibold">STILL HAVE DOUBTS ?</h1>
+          <p className="mt-5 text-center">
+            Get in touch with the Support Team that would guide you better.
+          </p>
+          <button
+            className="border rounded-full mt-10 font-medium text-lg bg-black py-4 sm:w-44 w-[65%] hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
+            style={{
+              boxShadow: " #2C93A8 0px 10px 36px 0px, #86CCDB 0px 0px 0px 1px",
+            }}
+          >
+            Help Center
+          </button>
+        </div>
+
+        {/* Section-11 */}
+        <div className="sec-11 w-full sm:h-[50vh] sm:px-24 bg-black sm:flex sm:py-0 py-20">
+          <div className="left sm:w-1/2 w-[95%] m-auto h-full text-white flex items-start justify-center flex-col">
+            <h1 className="text-4xl font-semibold">
+              WANNA START AN ADVENTURE ?
+            </h1>
+            <p className="mt-5">
+              Join us to experience a new generation of work ethos where your
+              growth is the unit of our success and your efforts matter!
+            </p>
+            <button
+              className="border rounded-full sm:mt-10 mt-10 font-medium text-lg bg-black py-4 sm:w-44 w-[65%] m-auto sm:m-0 hover:bg-[#86CCDB] hover:text-black ease-in duration-300"
+              style={{
+                boxShadow:
+                  " #2C93A8 0px 10px 36px 0px, #86CCDB 0px 0px 0px 1px",
+              }}
+            >
+              Join Us
+            </button>
+          </div>
+          <div className="right sm:w-1/2 mt-10 sm:mt-0 w-[80%] m-auto h-full object-contain flex items-center justify-center sm:p-5 ">
+            <img className="w-full h-full object-contain" src={hiring} alt="hiring image" />
           </div>
         </div>
       </div>
