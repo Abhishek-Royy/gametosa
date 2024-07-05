@@ -262,7 +262,7 @@ function Homepage() {
         </div>
 
         {/* Section-9 */}
-        <div
+        {/* <div
           className="sec-9 w-full sm:h-[66vh] sm:py-0 py-10 bg-cover sm:flex bg-center sm:px-24"
           style={{
             backgroundImage: `url(${comunityBg})`,
@@ -295,7 +295,7 @@ function Homepage() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Section-10 */}
         <div
